@@ -5,9 +5,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tentang Kami</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon-gt-rounded.png" />
 </head>
-<body style="background-color: #f5f5f5;">
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+      }
+      
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 30px;
+        border-bottom: 1px solid #ddd;
+        background-color: #fff;
+      }
+      
+      .navbar-logo img {
+        max-width: 100%;   
+        height: auto;     
+        width: 130px;
+      }
+
+      .navbar-menu {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+      }
+      
+      .navbar-menu a {
+        text-decoration: none;
+        color: #111;
+        font-weight: bold;
+      }
+
+      .navbar-search {
+        display: flex;
+        align-items: center;
+        gap: 15px;     
+      }
+
+      .search-bar {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        padding: 5px 10px;
+      }
+
+      .search-bar input {
+        border: none;
+        outline: none;
+        padding: 5px;      
+      }
+
+      .search-bar img {
+        max-width: 100%;   
+        height: auto;     
+        width: 30px;
+      }
+
+      .icon {
+        max-width: 100%;   
+        height: auto;     
+        width: 20px;
+        cursor: pointer;
+      }
+    </style>
+<body>
    <div id="navbar-placeholder"></div>
     <script>
     fetch('menu-utama.html')
