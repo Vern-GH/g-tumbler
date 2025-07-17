@@ -6,6 +6,14 @@
   <title>Promo g-tumbler</title>
 </head>
 <body>
+   <div id="navbar-placeholder"></div>
+    <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+    </script>
   <h1>Promo Hari Ini!</h1>
   <p>Ini adalah halaman promo produk g-tumbler.</p>
 </body>
