@@ -6,6 +6,14 @@
   <title>Kontak Kami</title>
 </head>
 <body>
+   <div id="navbar-placeholder"></div>
+    <script>
+    fetch('menu-utama.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+    </script>
   <h1>Kontak Kami</h1>
   <p>Anda bisa menghubungi kami pada : </n> WhatssApp : +62 896 7830 1921 </n> Instagram : gtumbler_official </n> E-mail : gtumblerofficial@gmail.com</p>
 </body>
