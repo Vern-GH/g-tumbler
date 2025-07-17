@@ -6,33 +6,77 @@
     <title>g-tumbler Official Website</title>
     <style>
       body {
+        margin: 0;
         font-family: Arial, sans-serif;
         background-color: white;
-        padding: 40px;
-      }
-      .konten {
-        text-align: left;
       }
       
-      img {
-        width: 150px;
-        margin-bottom: 20px;
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 30px;
+        border-bottom: 1px solid #ddd;
+        background-color: #fff;
+      }
+      
+      .navbar-logo img {
+        height: 30px;
       }
 
-      h1 {
-        color: #333;
+      .navbar-menu a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #111;
+        font-weight: bold;
       }
 
-      p{
-        color: #555;
+      .navbar-search {
+        display: flex;
+        align-items: center;
+        gap: 15px;     
+      }
+
+      .search-bar {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        padding: 5px 10px;
+      }
+
+      .search-bar input {
+        border: none;
+        outline: none;
+        padding: 5px;      
+      }
+
+      .search-bar img {
+        height: 16px;
+        margin-right: 5px;
       }
     </style>
   </head>
   <body>
-    <div class="konten">
-      <img src="logo g-tumbler.png" alt="Logo Produk">
-      <h1>g-tumbler selalu di hati</h1>
-      <p>Thank you</p>
+    <div class="navbar">
+      
+      <div class="navbar-logo">
+        <img src="logo g-tumbler.png" alt="g-tumbler">
+      </div>
+      
+      <div class="navbar-menu">
+        <a href="#">Produk</a>
+        <a href="#">Tentang Kami</a>
+        <a href="#">Promo</a>
+        <a href="#">Kontak</a>
+      </div>
+
+      <div class="navbar-search">
+        <div class="search-bar">
+          <img src="search-icon.png" alt="Search" />
+          <input type="text" placeholder="Search" />
+        </div>
+      </div>
     </div>
   </body>
 </html>
