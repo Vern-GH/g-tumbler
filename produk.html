@@ -5,6 +5,14 @@
   <title>Produk - g-tumbler</title>
 </head>
 <body>
+   <div id="navbar-placeholder"></div>
+    <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+    </script>
   <h1>Daftar Produk Kami</h1>
   <p>Ini adalah halaman produk g-tumbler.</p>
 </body>
