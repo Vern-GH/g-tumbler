@@ -147,16 +147,16 @@
         padding: 40px 50px;
       }
 
-      .new-arrivals {
+      .koleksi-terbaru {
         text-align: center;
-        font-size: 32px;
+        font-size: 35px;
         font-weight: bold;
-        margin-bottom: 32px;
+        margin-bottom: 35px;
       }
 
       .product-gallery {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(4, 1fr);
         gap: 24px;
         padding: 40px;
         max-width: 1000px;
@@ -207,8 +207,11 @@
           width: 100px;
         }
         main { padding: 20px; }
-        .new-arrivals { font-size: 24px; }
-        .product-gallery { gap: 16px; }
+        .koleksi-terbaru { font-size: 24px; }
+        .product-gallery { 
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px; 
+        }
       }
         
     </style>
@@ -216,30 +219,38 @@
     
     <div id="navbar-placeholder"></div>
 
+  
+
     <main>
-      <div class="new-arrivals">NEW ARRIVALS</div>
+      <div class="koleksi-terbaru">KOLEKSI TERBARU</div>
       <div class="product-gallery">
 
         <div class="product-item">
-          <img src="img/produk1.png" alt="The Original">
+          <img src="img/The Original.png" alt="The Original">
           <p class="product-name">The Original</p>
+          <p class="product-category">g-Classic</p>
+        </div>
+
+        <div class="product-item">
+          <img src="img/The Ordinary.png" alt="The Ordinary">
+          <p class="product-name">The Ordinary</p>
           <p class="product-category">g-Classic</p>
         </div>
         
         <div class="product-item">
-          <img src="img/produk2.png" alt="g-classic Midnight Black">
-          <p class="product-name">Xtreme One</p>
+          <img src="img/X-Treme One.png" alt="X-Treme One">
+          <p class="product-name">X-Treme One</p>
           <p class="product-category">g-Sport</p>
         </div>
       
         <div class="product-item">
-          <img src="img/produk3.png" alt="Wine Key">
-          <p class="product-name">The Bubbles</p>
+          <img src="img/Bubbles.png" alt="Bubbles">
+          <p class="product-name">Bubbles</p>
           <p class="product-category">g-Kids</p>
         </div>
         
       </div>
-  </main>
+    </main>
     
   <script>
     fetch('menu-utama.html')
