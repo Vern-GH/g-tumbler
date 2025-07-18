@@ -5,45 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>g-tumbler Official Website</title>
     <link rel="icon" type="image/png" href="favicon-gt-rounded.png" />
-  </head>
     <style>
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f5f5f5;
-      }
+      
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      
+      body { font-family: Arial, sans-serif; background: #f7f7f7; color: #333; }
       
       .navbar {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 30px;
+        align-items: center; justify-content: space-between;
+        padding: 12px 32px;
         border-bottom: 1px solid #ddd;
         background-color: #fff;
+        position: sticky; top: 0; z-index: 100;
       }
       
-      .navbar-logo img {
-        max-width: 100%;   
-        height: auto;     
-        width: 130px;
-      }
+      .navbar-logo img { height: 40px; }
 
-      .navbar-menu {
-        display: flex;
-        justify-content: center;
-        gap: 80px;
-      }
+      .navbar-menu { display: flex; gap: 30px; }
       
       .navbar-menu a {
         text-decoration: none;
-        color: #111;
-        font-weight: bold;
+        color: #000;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 8px 4px;
       }
-
+      
+      .navbar-menu a:hover { border-bottom: 2px solid #000; }
+      
       .navbar-search {
         display: flex;
         align-items: center;
-        gap: 15px;     
+        gap: 16px;
       }
 
       .search-bar {
@@ -51,38 +45,124 @@
         align-items: center;
         border: 1px solid #ccc;
         border-radius: 20px;
-        padding: 5px 10px;
+        padding: 4px 8px;
+        background: #fff;
       }
 
       .search-bar input {
         border: none;
         outline: none;
-        padding: 5px;      
+        font-size: 14px;
+        width: 140px;      
       }
 
-      .search-bar img {
-        max-width: 100%;   
-        height: auto;     
-        width: 30px;
+      .search-bar img { width: 16px; }
+
+      icon { width: 20px; height: auto; cursor: pointer; }
+
+      main {
+        padding: 40px 50px;
       }
 
-      .icon {
-        max-width: 100%;   
-        height: auto;     
-        width: 20px;
-        cursor: pointer;
+      .new-arrivals {
+        text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 32px;
       }
+
+      .product-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 24px;
+      }
+      
+      .product-item {
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        text-align: center;
+        padding: 16px;
+        max-width: 250px;
+        margin: 0 auto;
+      }
+      
+      .product-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+      }
+      
+      .product-name {
+        font-weight: bold;
+        padding: 8px 0 4px 0;
+        font-size: 14px;
+        color: #111;
+        margin: 0;
+      }
+
+      .product-category {
+        font-size: 12px;
+        color: #777;
+        margin: 0;
+        padding-bottom: 12px;
+      }
+
+      @media (max-width: 768px) {
+        .navbar { flex-direction: column; align-items: flex-start; }
+        .navbar-menu {
+          flex-wrap: wrap;
+          gap: 12px;
+          margin-top: 12px;
+        }
+        .search-bar input {
+          width: 100px;
+        }
+        main { padding: 20px; }
+        .new-arrivals { font-size: 24px; }
+        .product-gallery { gap: 16px; }
+      }
+        
     </style>
-  <body>
+</head>
+<body>
     
     <div id="navbar-placeholder"></div>
-    <script>
+
+    <main>
+      <div class="new-arrivals">NEW ARRIVALS</div>
+      <div class="product-gallery">
+
+        <div class="product-item">
+          <img src="img/produk1.png" alt="The Original">
+          <p class="product-name">The Original</p>
+          <p class="product-category">g-Classic</p>
+        </div>
+        
+        <div class="product-item">
+          <img src="img/produk2.png" alt="g-classic Midnight Black">
+          <p class="product-name">Xtreme One</p>
+          <p class="product-category">g-Sport</p>
+        </div>
+      
+        <div class="product-item">
+          <img src="img/produk3.png" alt="Wine Key">
+          <p class="product-name">The Bubbles</p>
+          <p class="product-category">g-Kids</p>
+        </div>
+        
+      </div>
+  </main>
+    
+  <script>
     fetch('menu-utama.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar-placeholder').innerHTML = data;
       });
-    </script>
+  </script>
     
-  </body>
+</body>
 </html>
