@@ -10,7 +10,12 @@
       
       * { margin: 0; padding: 0; box-sizing: border-box; }
       
-      body { font-family: Arial, sans-serif; background: #f7f7f7; color: #333; }
+      body { 
+        font-family: Arial, sans-serif; 
+        background: #f7f7f7; 
+        color: #333; 
+        font-size: 25px;
+      }
       
       .navbar {
         display: flex;
@@ -21,67 +26,37 @@
         position: sticky; top: 0; z-index: 100;
       }
       
-      .navbar-logo img { height: 40px; }
+      .navbar-logo img { height: 48px; }
 
-      .navbar-home { display: flex; gap: 30px; }
-
-      .navbar-home a {
-        text-decoration: none;
-        color: #000;
-        font-weight: 600;
-        font-size: 14px;
-        padding: 8px 4px;
+      .navbar-home,
+      .navbar-produk,
+      .navbar-promo,
+      .navbar-info,
+      .navbar-kontak {
+        display: flex;
+        gap: 30px;
       }
-      
-      .navbar-home a:hover { border-bottom: 2px solid #000; }
 
-      .navbar-produk { display: flex; gap: 30px; }
-
-      .navbar-produk a {
-        text-decoration: none;
-        color: #000;
-        font-weight: 600;
-        font-size: 14px;
-        padding: 8px 4px;
-      }
-      
-      .navbar-produk a:hover { border-bottom: 2px solid #000; }
-
-      .navbar-promo { display: flex; gap: 30px; }
-      
-      .navbar-promo a {
-        text-decoration: none;
-        color: #000;
-        font-weight: 600;
-        font-size: 14px;
-        padding: 8px 4px;
-      }
-      
-      .navbar-promo a:hover { border-bottom: 2px solid #000; }
-
-      .navbar-info { display: flex; gap: 30px; }
-      
-      .navbar-info a {
-        text-decoration: none;
-        color: #000;
-        font-weight: 600;
-        font-size: 14px;
-        padding: 8px 4px;
-      }
-      
-      .navbar-info a:hover { border-bottom: 2px solid #000; }
-
-      .navbar-kontak { display: flex; gap: 30px; }
-      
+      .navbar-home a,
+      .navbar-produk a,
+      .navbar-promo a,
+      .navbar-info a,
       .navbar-kontak a {
         text-decoration: none;
         color: #000;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 25px;
         padding: 8px 4px;
+        margin: 0 16px;
       }
-      
-      .navbar-kontak a:hover { border-bottom: 2px solid #000; }
+
+      .navbar-home a:hover,
+      .navbar-produk a:hover,
+      .navbar-promo a:hover,
+      .navbar-info a:hover,
+      .navbar-kontak a:hover {
+        border-bottom: 2px solid #000;
+      }
       
       .navbar-search {
         display: flex;
@@ -94,22 +69,22 @@
         align-items: center;
         border: 1px solid #ccc;
         border-radius: 20px;
-        padding: 4px 8px;
+        padding: 6px 12px;
         background: #fff;
       }
 
       .search-bar input {
         border: none;
         outline: none;
-        font-size: 14px;
-        width: 140px;      
+        font-size: 20px;
+        width: 160px;      
       }
 
-      .search-bar img { width: 20px; }
+      .search-bar img { width: 24px; }
 
       .icon {
-        width: 20px;    
-        height: 20px;
+        width: 24px;    
+        height: 24px;
         object-fit: contain;
         cursor: pointer;
       }
