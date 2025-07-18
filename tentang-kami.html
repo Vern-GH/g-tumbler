@@ -7,9 +7,14 @@
   <link rel="icon" type="image/png" href="favicon-gt-rounded.png" />
 </head>
   <style>
-            * { margin: 0; padding: 0; box-sizing: border-box; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
       
-      body { font-family: Arial, sans-serif; background: #f7f7f7; color: #333; }
+      body { 
+        font-family: Arial, sans-serif; 
+        background: #f7f7f7; 
+        color: #333; 
+        font-size: 18px;
+      }
       
       .navbar {
         display: flex;
@@ -20,72 +25,43 @@
         position: sticky; top: 0; z-index: 100;
       }
       
-      .navbar-logo img { height: 40px; }
+      .navbar-logo img { height: 30px; }
 
-      .navbar-home { display: flex; gap: 30px; }
-
-      .navbar-home a {
-        text-decoration: none;
-        color: #000;
-        font-weight: 600;
-        font-size: 14px;
-        padding: 8px 4px;
+      .navbar-home,
+      .navbar-produk,
+      .navbar-promo,
+      .navbar-info,
+      .navbar-kontak {
+        display: flex;
+        gap: 30px;
       }
-      
-      .navbar-home a:hover { border-bottom: 2px solid #000; }
 
-      .navbar-produk { display: flex; gap: 30px; }
-
-      .navbar-produk a {
-        text-decoration: none;
-        color: #000;
-        font-weight: 600;
-        font-size: 14px;
-        padding: 8px 4px;
-      }
-      
-      .navbar-produk a:hover { border-bottom: 2px solid #000; }
-
-      .navbar-promo { display: flex; gap: 30px; }
-      
-      .navbar-promo a {
-        text-decoration: none;
-        color: #000;
-        font-weight: 600;
-        font-size: 14px;
-        padding: 8px 4px;
-      }
-      
-      .navbar-promo a:hover { border-bottom: 2px solid #000; }
-
-      .navbar-info { display: flex; gap: 30px; }
-      
-      .navbar-info a {
-        text-decoration: none;
-        color: #000;
-        font-weight: 600;
-        font-size: 14px;
-        padding: 8px 4px;
-      }
-      
-      .navbar-info a:hover { border-bottom: 2px solid #000; }
-
-      .navbar-kontak { display: flex; gap: 30px; }
-      
+      .navbar-home a,
+      .navbar-produk a,
+      .navbar-promo a,
+      .navbar-info a,
       .navbar-kontak a {
         text-decoration: none;
         color: #000;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 18px;
         padding: 8px 4px;
+        margin: 0 16px;
       }
-      
-      .navbar-kontak a:hover { border-bottom: 2px solid #000; }
+
+      .navbar-home a:hover,
+      .navbar-produk a:hover,
+      .navbar-promo a:hover,
+      .navbar-info a:hover,
+      .navbar-kontak a:hover {
+        border-bottom: 2px solid #000;
+      }
       
       .navbar-search {
         display: flex;
         align-items: center;
         gap: 16px;
+        font-size: 18px;
       }
 
       .search-bar {
@@ -93,26 +69,75 @@
         align-items: center;
         border: 1px solid #ccc;
         border-radius: 20px;
-        padding: 4px 8px;
+        padding: 6px 12px;
         background: #fff;
+        transition: background 0.3s;
       }
 
+      .search-bar:hover {
+        background: #e0e0e0;
+      }
+
+      .search-icon-container {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s;
+        background: transparent;
+      }
+      
+      .search-icon-container:hover {
+        background: #c4c4c4;
+      }
+      
       .search-bar input {
         border: none;
         outline: none;
-        font-size: 14px;
-        width: 140px;      
+        font-size: 18px;
+        width: 160px;
+        line-height: 1.2;
+        background: transparent;
+        margin-left: 8px;
       }
 
-      .search-bar img { width: 20px; }
-
-      .icon {
-        width: 20px;    
+      .search-bar img { 
+        width: 20px;
         height: 20px;
         object-fit: contain;
+        display: block;
         cursor: pointer;
       }
 
+      .search-bar img:active {
+        transform: scale(0.95);
+      }
+
+      .icon {
+        width: 22px;    
+        height: 22px;
+        object-fit: contain;
+        display: block;
+        cursor: pointer;
+      }
+
+      .icon-container {
+        background: transparent;
+        border-radius: 50%;
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s;
+      }
+
+      .icon-container:hover {
+        background: #c4c4c4;
+      }
+      
       .icon:active {
         transform: scale(0.95);
       }
