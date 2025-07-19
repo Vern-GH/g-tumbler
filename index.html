@@ -12,7 +12,7 @@
       
       body { 
         font-family: Arial, sans-serif; 
-        background: #f7f7f7; 
+        background: #f9f9f9; 
         color: #333; 
         font-size: 18px;
       }
@@ -69,7 +69,7 @@
         display: flex;
         align-items: center;
         border: 1px solid #ccc;
-        border-radius: 20px;
+        border-radius: 30px;
         padding: 6px 12px;
         background: #fff;
         transition: background 0.3s;
@@ -144,7 +144,7 @@
       }
 
       main {
-        padding: 40px 50px;
+        padding: 40px 20px;
       }
 
       .gambar-utama img {
@@ -160,15 +160,15 @@
         text-align: center;
         font-size: 35px;
         font-weight: bold;
-        margin-bottom: 35px;
+        margin-bottom: 10px;
       }
 
       .product-gallery {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 24px;
-        padding: 40px;
-        max-width: 1000px;
+        padding: 0 10px;
+        max-width: 1200px;
         margin: 0 auto;
       }
       
@@ -179,8 +179,7 @@
         box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         text-align: left;
         padding: 16px;
-        max-width: 250px;
-        margin: 0 auto;
+        transition: transform 0.2s ease;
       }
       
       .product-item img {
@@ -199,10 +198,14 @@
       }
 
       .product-category {
-        font-size: 12px;
+        font-size: 13px;
         color: #777;
         margin: 0;
-        padding-bottom: 12px;
+        padding-bottom: 10px;
+      }
+
+      .product-item:hover {
+        transform: translateY(-5px);
       }
 
       @media (max-width: 768px) {
@@ -215,14 +218,38 @@
         .search-bar input {
           width: 100px;
         }
-        main { padding: 20px; }
-        .koleksi-terbaru { font-size: 24px; }
+        main { padding: 30px 15px; }
+        .koleksi-terbaru { font-size: 26px; }
         .product-gallery { 
           grid-template-columns: repeat(2, 1fr);
           gap: 16px; 
         }
+        .product-name {
+          font-size: 14px;
+        }
+      
+        .product-category {
+          font-size: 12px;
+        }
       }
-        
+
+      @media (max-width: 480px) {
+      .product-gallery {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    
+      .koleksi-terbaru {
+        font-size: 22px;
+      }
+    
+      .product-name {
+        font-size: 13px;
+      }
+    
+      .product-category {
+        font-size: 11px;
+      }
+    }
     </style>
 <body>
     
