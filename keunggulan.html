@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami - g-tumbler</title>
+  <link rel="icon" type="image/png" href="favicon-gt-rounded.png" />
+</head>
+  <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      
+      body { 
+        font-family: Arial, sans-serif; 
+        background: #f7f7f7; 
+        color: #333; 
+        font-size: 18px;
+      }
+      
+      .navbar {
+        display: flex;
+        align-items: center; justify-content: space-between;
+        padding: 12px 32px;
+        border-bottom: 1px solid #ddd;
+        background-color: #fff;
+        position: sticky; top: 0; z-index: 100;
+      }
+      
+      .navbar-logo img { height: 30px; }
+
+      .navbar-home,
+      .navbar-produk,
+      .navbar-promo,
+      .navbar-info,
+      .navbar-kontak {
+        display: flex;
+        gap: 30px;
+      }
+
+      .navbar-home a,
+      .navbar-produk a,
+      .navbar-promo a,
+      .navbar-info a,
+      .navbar-kontak a {
+        text-decoration: none;
+        color: #000;
+        font-weight: 600;
+        font-size: 18px;
+        padding: 8px 4px;
+        margin: 0 16px;
+      }
+
+      .navbar-home a:hover,
+      .navbar-produk a:hover,
+      .navbar-promo a:hover,
+      .navbar-info a:hover,
+      .navbar-kontak a:hover {
+        border-bottom: 2px solid #000;
+      }
+      
+      .navbar-search {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 18px;
+      }
+
+      .search-bar {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        padding: 6px 12px;
+        background: #fff;
+        transition: background 0.3s;
+      }
+
+      .search-bar:hover {
+        background: #e0e0e0;
+      }
+
+      .search-icon-container {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s;
+        background: transparent;
+      }
+      
+      .search-icon-container:hover {
+        background: #c4c4c4;
+      }
+      
+      .search-bar input {
+        border: none;
+        outline: none;
+        font-size: 18px;
+        width: 160px;
+        line-height: 1.2;
+        background: transparent;
+        margin-left: 8px;
+      }
+
+      .search-bar img { 
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        display: block;
+        cursor: pointer;
+      }
+
+      .search-bar img:active {
+        transform: scale(0.95);
+      }
+
+      .icon {
+        width: 22px;    
+        height: 22px;
+        object-fit: contain;
+        display: block;
+        cursor: pointer;
+      }
+
+      .icon-container {
+        background: transparent;
+        border-radius: 50%;
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s;
+      }
+
+      .icon-container:hover {
+        background: #c4c4c4;
+      }
+      
+      .icon:active {
+        transform: scale(0.95);
+      }
+    </style>
+<body>
+   <div id="navbar-placeholder"></div>
+    <script>
+    fetch('menu-utama.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+    </script>
+<h1>Tentang Kami</h1>
+  <p>g-tumbler didirikan pada 17 Juli 2025 oleh Vern Giovino Hartono. Huruf "g" pada nama produk g-tumbler memiliki arti "Giovino".</p>
+</body>
+</html>
